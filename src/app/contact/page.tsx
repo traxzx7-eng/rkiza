@@ -47,7 +47,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xl font-bold text-primary-900 dark:text-white mb-2">الهاتف</h3>
                   <p className="text-charcoal-800 dark:text-white/80 font-plex" dir="ltr">
-                    +218 XX XXX XXXX
+                    +218 91 220 0921
                   </p>
                 </div>
               </div>
@@ -59,7 +59,8 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xl font-bold text-primary-900 dark:text-white mb-2">البريد الإلكتروني</h3>
                   <p className="text-charcoal-800 dark:text-white/80 font-plex">
-                    info@rakiza.ly
+                    info@rakiza.ly<br />
+                    careers@rakiza.ly
                   </p>
                 </div>
               </div>
@@ -134,12 +135,18 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-bold text-charcoal-800 dark:text-white/90 mb-2">الموضوع</label>
-                <input 
-                  type="text" 
+                <select 
                   id="subject" 
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-white/10 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 outline-none transition-all font-plex bg-slate-50 dark:bg-charcoal-900 focus:bg-white dark:focus:bg-charcoal-900/80 dark:text-white"
-                  placeholder="موضوع الرسالة"
-                />
+                  defaultValue=""
+                >
+                  <option value="" disabled>اختر الخدمة المطلوبة</option>
+                  <option value="إدارة العقود">إدارة العقود</option>
+                  <option value="الاستشارات الإدارية ودراسات الجدوى">الاستشارات الإدارية ودراسات الجدوى</option>
+                  <option value="إدارة المشاريع والتميز التشغيلي">إدارة المشاريع والتميز التشغيلي</option>
+                  <option value="التطوير المؤسسي والحوكمة">التطوير المؤسسي والحوكمة</option>
+                  <option value="أخرى">أخرى</option>
+                </select>
               </div>
 
               <div>

@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-charcoal-900 text-ivory pt-16 pb-8 border-t-4 border-accent-500">
+    <footer id="contact" className="bg-primary-900 text-ivory pt-16 pb-8 border-t-4 border-accent-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
@@ -45,9 +45,12 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 text-accent-500 shrink-0 mt-0.5" />
                 <span>طرابلس - ليبيا، شارع جرابة، منطقة بن عاشور</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-accent-500 shrink-0" />
-                <a href="mailto:info@rakiza.ly" className="hover:text-accent-400 transition-colors" dir="ltr">info@rakiza.ly</a>
+              <li className="flex items-start gap-3">
+                <Mail className="h-5 w-5 text-accent-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:info@rakiza.ly" className="hover:text-accent-400 transition-colors" dir="ltr">info@rakiza.ly</a>
+                  <a href="mailto:careers@rakiza.ly" className="hover:text-accent-400 transition-colors" dir="ltr">careers@rakiza.ly</a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent-500 shrink-0" />
@@ -56,11 +59,11 @@ export default function Footer() {
             </ul>
 
             {/* Interactive Map Placeholder */}
-            <div className="mt-6 w-full h-32 bg-charcoal-800 rounded-lg overflow-hidden relative border border-charcoal-800">
+            <div className="mt-6 w-full h-32 bg-primary-800 rounded-lg overflow-hidden relative border border-primary-800">
               {/* Fake Map Background */}
               <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#14b8a6 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-charcoal-900/80 backdrop-blur-sm px-4 py-2 rounded-full border border-accent-500/30 text-xs text-accent-400 flex items-center gap-2">
+                <div className="bg-primary-900/80 backdrop-blur-sm px-4 py-2 rounded-full border border-accent-500/30 text-xs text-accent-400 flex items-center gap-2">
                   <MapPin className="h-4 w-4" /> موقعنا على الخريطة
                 </div>
               </div>
@@ -69,7 +72,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-12 pt-8 border-t border-charcoal-800 text-center text-sm text-gray-500">
+        <div className="mt-12 pt-8 border-t border-primary-800 text-center text-sm text-primary-100/60">
           <p>© 2026 ركيزة للخدمات الفنية والاستشارية. جميع الحقوق محفوظة.</p>
         </div>
       </div>

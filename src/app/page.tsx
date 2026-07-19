@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ChevronDown } from 'lucide-react';
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 
 const stats = [
   { value: '2021', label: 'عام التأسيس والانطلاق' },
@@ -49,7 +49,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-primary-900 leading-[1.2] mb-8"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold font-plex text-primary-900 leading-loose mb-8"
+              style={{ wordSpacing: '0.2em', lineHeight: '2' }}
             >
               حين تصبح القرارات أكثر تعقيداً، تحتاج إلى ركيزة أكثر وضوحاً.
             </motion.h1>
@@ -83,11 +84,11 @@ export default function Home() {
       <section id="about" className="py-24 bg-white dark:bg-charcoal-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 max-w-4xl">
-  <span className="text-accent-500 font-bold tracking-wider text-sm mb-4 block">ليبيون في العمق، عالميون في الكفاءة</span>
-  <p className="text-2xl leading-relaxed text-charcoal-800 dark:text-white font-plex">
-    منذ عام 2024، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
-  </p>
-</div>
+            <span className="text-accent-500 font-bold tracking-wider text-sm mb-4 block">من نحن وما نمثله - ليبيون في العمق، عالميون في الكفاءة</span>
+            <p className="text-2xl leading-relaxed text-charcoal-800 dark:text-white font-plex">
+              تأسست ركيزة بطرابلس، عام 2021، على رسالة واضحة: أن تجلب إلى السوق الليبية جودة الاستشارات الدولية الرائدة ومدعمة على أيدي محترفين يعرفونها حق المعرفة من الداخل. ركيزة — يعبر عن الأساس والركيزة والروابط النقية والصلبة التي تشكل ركائز طموحات الأعمال. منذ تأسيسنا في يونيو 2021، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pillars.map((pillar, index) => (
