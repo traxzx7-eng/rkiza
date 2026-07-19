@@ -83,11 +83,11 @@ export default function Home() {
       <section id="about" className="py-24 bg-white dark:bg-charcoal-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 max-w-4xl">
-            <span className="text-accent-500 font-bold tracking-wider text-sm mb-4 block">من نحن وما نمثله - ليبيون في العمق، عالميون في الكفاءة</span>
-            <p className="text-2xl leading-relaxed text-charcoal-800 dark:text-white font-plex">
-              تأسست ركيزة بطرابلس، عام 2021، على رسالة واضحة: أن تجلب إلى السوق الليبية جودة الاستشارات الدولية الرائدة ومدعمة على أيدي محترفين يعرفونها حق المعرفة من الداخل. ركيزة — يعبر عن الأساس والركيزة والروابط النقية والصلبة التي تشكل ركائز طموحات الأعمال. منذ تأسيسنا في يونيو 2021، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
-            </p>
-          </div>
+  <span className="text-accent-500 font-bold tracking-wider text-sm mb-4 block">ليبيون في العمق، عالميون في الكفاءة</span>
+  <p className="text-2xl leading-relaxed text-charcoal-800 dark:text-white font-plex">
+    منذ عام 2024، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
+  </p>
+</div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pillars.map((pillar, index) => (

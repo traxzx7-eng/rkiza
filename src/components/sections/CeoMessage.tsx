@@ -16,7 +16,7 @@ export default function CeoMessage() {
             className="w-full lg:w-1/2 relative"
           >
             <div className="relative z-10 bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
-              <div className="text-gold-500 text-6xl font-serif leading-none mb-4">"</div>
+              <div className="text-gold-500 text-6xl font-serif leading-none mb-4">&quot;</div>
               <p className="text-xl md:text-2xl text-navy-900 font-bold font-tajawal leading-snug mb-8">
                 {content.ceo.highlight}
               </p>
