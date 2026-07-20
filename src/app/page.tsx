@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ChevronDown } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 const stats = [
   { value: '2021', label: 'عام التأسيس والانطلاق' },
