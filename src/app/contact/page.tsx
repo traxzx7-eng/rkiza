@@ -145,6 +145,7 @@ export default function Contact() {
                   <option value="الاستشارات الإدارية ودراسات الجدوى">الاستشارات الإدارية ودراسات الجدوى</option>
                   <option value="إدارة المشاريع والتميز التشغيلي">إدارة المشاريع والتميز التشغيلي</option>
                   <option value="التطوير المؤسسي والحوكمة">التطوير المؤسسي والحوكمة</option>
+                  <option value="أنظمة التكييف والسلامة (Trane)">أنظمة التكييف والسلامة (Trane)</option>
                   <option value="أخرى">أخرى</option>
                 </select>
               </div>

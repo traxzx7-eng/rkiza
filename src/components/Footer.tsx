@@ -15,7 +15,7 @@ export default function Footer() {
                 className="w-10 h-10 object-contain rounded-lg shadow-sm bg-white p-1" 
                 alt="ركيزة" 
               />
-              <span className="text-xl font-bold text-white font-sans tracking-tight">ركيزة التقدم</span>
+              <span className="text-xl font-bold text-white font-sans tracking-tight">الركيزة الدائمة</span>
             </div>
             <p className="text-sm text-gray-400 font-plex leading-relaxed">
               استشارات استراتيجية واستشارات استثمارية لجيل جديد من الأعمال الليبية.
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-800 text-center text-sm text-primary-100/60">
-          <p>© 2026 ركيزة للخدمات الفنية والاستشارية. جميع الحقوق محفوظة.</p>
+          <p>© 2026 الركيزة الدائمة للخدمات الفنية والاستشارية. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>
