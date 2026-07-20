@@ -1,8 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ChevronDown } from 'lucide-react';
-import {  useState } from 'react';
+import { ArrowLeft } from 'lucide-react';
 
 const stats = [
   { value: '2021', label: 'عام التأسيس والانطلاق' },
@@ -34,7 +33,6 @@ const pillars = [
 ];
 
 export default function Home() {
-  const [ceoOpen, setCeoOpen] = useState(false);
 
   return (
     <>
@@ -86,7 +84,7 @@ export default function Home() {
           <div className="mb-16 max-w-4xl">
             <span className="text-accent-500 font-bold tracking-wider text-sm mb-4 block">من نحن وما نمثله - ليبيون في العمق، عالميون في الكفاءة</span>
             <p className="text-2xl leading-relaxed text-charcoal-800 dark:text-white font-plex">
-              تأسست ركيزة بطرابلس، عام 2021، على رسالة واضحة: أن تجلب إلى السوق الليبية جودة الاستشارات الدولية الرائدة ومدعمة على أيدي محترفين يعرفونها حق المعرفة من الداخل. ركيزة — يعبر عن الأساس والركيزة والروابط النقية والصلبة التي تشكل ركائز طموحات الأعمال. منذ تأسيسنا في يونيو 2021، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
+              من نحن وما نمثله - ليبيون في العمق، عالميون في الكفاءة. تأسست ركيزة بطرابلس، عام 2021، على رسالة واضحة: أن تجلب إلى السوق الليبية جودة الاستشارات الدولية الرائدة ومدعمة على أيدي محترفين يعرفونها حق المعرفة من الداخل. ركيزة — يعبر عن الأساس والركيزة والروابط النقية والصلبة التي تشكل ركائز طموحات الأعمال. منذ تأسيسنا في يونيو 2021، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
             </p>
           </div>
 
@@ -109,7 +107,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DYNAMIC STATISTICS PANEL */}
+      
+      {/* TRANE PARTNERSHIP SECTION */}
+      <section className="py-24 bg-slate-50 dark:bg-charcoal-900/50 relative transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-8 leading-tight">
+              شركة الركيزة الدائمة هي وكيل لشركة Trane المتخصصة في تصنيع أنظمة التدفئة والتهوية وتكييف الهواء
+            </h2>
+            <div className="flex justify-center mb-10">
+              <img src="/trane_logo.jpg" alt="Trane Logo" className="h-24 md:h-32 object-contain" />
+            </div>
+            <p className="text-lg text-charcoal-800 dark:text-white/90 font-plex leading-relaxed text-justify md:text-center">
+              تُعد شركة &quot;ترين&quot; (Trane) إحدى الشركات العالمية الرائدة في تصميم وتصنيع أنظمة التدفئة والتهوية وتكييف الهواء (HVAC)، بالإضافة إلى توفير حلول متقدمة في أنظمة الإطفاء ومكافحة الحريق لضمان سلامة المنشآت. تتمثل وظيفتها الأساسية في خلق بيئات داخلية صحية وآمنة عبر تقديم أنظمة متكاملة للمباني السكنية والتجارية والصناعية بكفاءة طاقة عالية. وإلى جانب تفوقها الهندسي، تولي الشركة اهتماماً كبيراً بمجال التدريب من أجل بناء خبراء وكوادر فنية متخصصة قادرة على إدارة وصيانة هذه الأنظمة المعقدة. وبذلك، تقدم الشركة حلولاً شاملة تسهم في تحسين جودة الحياة ورفع مستوى الأمان داخل المنشآت المختلفة.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
+              <div className="h-64 overflow-hidden bg-slate-100">
+                <img src="/rtu.jpg" alt="Rooftop Unit (RTU)" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold text-primary-900 dark:text-white mb-4">Rooftop Unit (RTU)</h3>
+                <p className="text-charcoal-800 dark:text-white/80 font-plex mb-6 flex-grow">هو جهاز تكييف متكامل (Package Unit) يتم تركيبه على سطح المبنى، ويحتوي داخل وحدة واحدة.</p>
+                <div className="space-y-3 mt-auto pt-6 border-t border-slate-100 dark:border-white/10 font-plex">
+                  <div>
+                    <span className="font-bold text-accent-500 text-sm">الاستخدامات: </span>
+                    <span className="text-sm text-charcoal-800 dark:text-white/70">المولات، المطاعم، المدارس، المساجد، المستودعات.</span>
+                  </div>
+                  <div>
+                    <span className="font-bold text-accent-500 text-sm">المميزات: </span>
+                    <span className="text-sm text-charcoal-800 dark:text-white/70">تركيب سريع، صيانة سهلة، تكلفة أولية منخفضة، مناسب للمساحات المفتوحة.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
+              <div className="h-64 overflow-hidden bg-slate-100">
+                <img src="/chiller.jpg" alt="نظام Chiller" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold text-primary-900 dark:text-white mb-4">نظام Chiller</h3>
+                <p className="text-charcoal-800 dark:text-white/80 font-plex mb-6 flex-grow">التشيلر لا يبرد الهواء مباشرة، بل يبرد الماء، ثم يتم توزيع الماء البارد إلى وحدات مناولة الهواء (AHU) أو وحدات FCU.</p>
+                <div className="space-y-3 mt-auto pt-6 border-t border-slate-100 dark:border-white/10 font-plex">
+                  <div>
+                    <span className="font-bold text-accent-500 text-sm">الاستخدامات: </span>
+                    <span className="text-sm text-charcoal-800 dark:text-white/70">المستشفيات، الفنادق، الأبراج، المطارات، المصانع.</span>
+                  </div>
+                  <div>
+                    <span className="font-bold text-accent-500 text-sm">المميزات: </span>
+                    <span className="text-sm text-charcoal-800 dark:text-white/70">كفاءة عالية للمباني الكبيرة، عمر تشغيلي طويل، مناسب للأحمال الكبيرة.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
+              <div className="h-64 overflow-hidden bg-slate-100">
+                <img src="/vrf_system.jpg" alt="نظام VRF" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold text-primary-900 dark:text-white mb-4">نظام VRF (Variable Refrigerant Flow)</h3>
+                <p className="text-charcoal-800 dark:text-white/80 font-plex mb-6 flex-grow">نظام يستخدم وسيط التبريد (الفريون) مباشرة بين الوحدة الخارجية والوحدات الداخلية، ويغير كمية الفريون حسب احتياج كل غرفة.</p>
+                <div className="space-y-3 mt-auto pt-6 border-t border-slate-100 dark:border-white/10 font-plex">
+                  <div>
+                    <span className="font-bold text-accent-500 text-sm">الاستخدامات: </span>
+                    <span className="text-sm text-charcoal-800 dark:text-white/70">الفلل، المكاتب، الفنادق، العيادات، المباني متعددة الغرف.</span>
+                  </div>
+                  <div>
+                    <span className="font-bold text-accent-500 text-sm">المميزات: </span>
+                    <span className="text-sm text-charcoal-800 dark:text-white/70">توفير كبير في استهلاك الكهرباء، تحكم مستقل لكل غرفة، تشغيل هادئ، تمديدات أقل من نظام التشيلر، مرونة في التوسعة.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
+              <div className="h-64 overflow-hidden bg-slate-100">
+                <img src="/fire_safety.jpg" alt="Fire &amp; Life Safety" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold text-primary-900 dark:text-white mb-4">Fire &amp; Life Safety</h3>
+                <p className="text-charcoal-800 dark:text-white/80 font-plex mb-6 flex-grow">تلتزم شركة Trane بتوفير بيئات آمنة وصحية داخل المباني تعمل أنظمتها بالتكامل مع أنظمة إنذار الحريق وإدارة المباني، حيث تقوم بإيقاف وحدات التكييف تلقائيا عند حدوث حريق، وإغلاق مخمدات الحريق والدخان وتشغيل أنظمة سحب الدخان وضغط السلالم للمساعدة في حماية الأرواح وتقليل انتشار الدخان.</p>
+                <div className="space-y-3 mt-auto pt-6 border-t border-slate-100 dark:border-white/10 font-plex">
+                  {/* Empty uses/features area */}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+{/* DYNAMIC STATISTICS PANEL */}
       <section className="py-20 bg-white relative overflow-hidden transition-colors duration-300">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#275A53 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -131,58 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CEO EXECUTIVE MESSAGE MODULE */}
-      <section className="py-24 bg-ivory dark:bg-charcoal-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            <div className="lg:w-1/3 w-full">
-              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-charcoal-900 shadow-xl group">
-                <img 
-                  src="/ceo.png" 
-                  alt="معاذ خالد - المؤسس التنفيذي" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-primary-900/10 mix-blend-multiply"></div>
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-charcoal-900/90 via-charcoal-900/40 to-transparent p-8">
-                  <h4 className="text-white font-bold text-xl mb-1">معاذ خالد</h4>
-                  <p className="text-accent-400 text-sm">المؤسس التنفيذي</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-2/3 w-full pt-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-accent-400 mb-8 leading-tight">
-                ردَم الهوة بين أرقى الممارسات الدولية وواقع السوق المحلية.
-              </h2>
-              <div className="prose prose-lg text-charcoal-800 dark:text-white/90 font-plex max-w-none">
-                <p className="mb-6 leading-relaxed">
-                  حين أسست ركيزة، كان الدافع إلى ذلك ملاحظة بسيطة. ففي كثير من المؤسسات، تتوافر الخبرة الفنية ويشترك منطلق المشاريع الطموحة، لكن غالباً ما تكون هناك حلقة مفقودة في التخطيط الاستراتيجي أو الحوكمة المحكمة أو التنفيذ المنهجي.
-                </p>
-                
-                <motion.div
-                  initial={false}
-                  animate={{ height: ceoOpen ? 'auto' : 0, opacity: ceoOpen ? 1 : 0 }}
-                  className="overflow-hidden"
-                >
-                  <p className="mb-6 leading-relaxed">
-                    لست غايتنا مجرد تقديم خدمات استشارية، بل أن نغدو شريكاً موثوقاً يعين المؤسسات على اتخاذ قرارات أرشد، وإدارة التعقيد التجاري، وترسيخ الحوكمة، وإنجاز المشاريع بثقة. نحن نؤمن بأن المعايير العالمية ليست قالباً جامداً يُفرض على أي سياق، بل هي ممارسات تُكيّف بحكمة لتلائم الواقع المحلي.
-                  </p>
-                  <p className="leading-relaxed">
-                    نسعى دائماً لنكون الركيزة التي تعتمد عليها في رحلة نموك المستدام.
-                  </p>
-                </motion.div>
-
-                <button 
-                  onClick={() => setCeoOpen(!ceoOpen)}
-                  className="mt-6 flex items-center gap-2 text-accent-500 font-bold hover:text-accent-600 transition-colors"
-                >
-                  {ceoOpen ? 'إغلاق الكلمة' : 'اقرأ الكلمة كاملة'}
-                  <ChevronDown className={`h-5 w-5 transition-transform ${ceoOpen ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       {/* EXTENDED CONTENT MODULES */}
       
       {/* 1. التحدي ودورنا */}
@@ -253,6 +298,11 @@ export default function Home() {
                 title: "التطوير المؤسسي والحوكمة",
                 desc: "المؤسسات القوية تُبنى على أنظمة واضحة ومسؤوليات محددة. ندعم المؤسسات في تطوير بنيتها الإدارية، وتعزيز الحوكمة، وبناء أنظمة عمل أكثر كفاءة واستدامة.",
                 tags: ["تطوير السياسات والإجراءات", "إعداد الأدلة الفنية", "إجراءات التشغيل القياسية (SOPs)", "الحوكمة المؤسسية والفنية", "تطوير الأنظمة الإدارية"]
+              },
+              {
+                title: "أنظمة التكييف والسلامة (Trane)",
+                desc: "وكيل معتمد لشركة Trane العالمية لتوريد وتركيب أحدث أنظمة التدفئة، التهوية، تكييف الهواء (HVAC)، وأنظمة مكافحة الحريق المتطورة.",
+                tags: ["أنظمة التدفئة", "التهوية", "تكييف الهواء", "مكافحة الحريق"]
               }
             ].map((srv, idx) => (
               <motion.div 

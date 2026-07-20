@@ -17,10 +17,10 @@ const ibmPlex = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "ركيزة التقدم للخدمات الفنية والاستشارية",
+  title: "الركيزة الدائمة",
   description: "استشارات استراتيجية واستشارات استثمارية لجيل جديد من الأعمال الليبية.",
   openGraph: {
-    title: "ركيزة التقدم",
+    title: "الركيزة الدائمة",
     description: "استشارات استراتيجية واستشارات استثمارية لجيل جديد من الأعمال الليبية.",
     locale: "ar_LY",
     type: "website",

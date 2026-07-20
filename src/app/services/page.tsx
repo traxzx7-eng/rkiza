@@ -27,6 +27,11 @@ const services = [
     title: 'استشارات التحول الرقمي والتكنولوجيا',
     desc: 'استراتيجية تقنية المعلومات، اختيار أنظمة المؤسسات (ERP)، حوكمة البيانات والأمن السيبراني، أتمتة العمليات (RPA).',
   },
+  {
+    num: '06',
+    title: 'أنظمة التكييف والسلامة (Trane)',
+    desc: 'وكيل معتمد لشركة Trane العالمية لتوريد وتركيب أحدث أنظمة التدفئة، التهوية، تكييف الهواء (HVAC)، وأنظمة مكافحة الحريق المتطورة.',
+  },
 ];
 
 export default function Services() {
@@ -45,7 +50,7 @@ export default function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {services.map((service, index) => (
             <motion.div
               key={service.num}
