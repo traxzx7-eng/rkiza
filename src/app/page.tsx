@@ -42,38 +42,43 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#275A53 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-4xl">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold font-plex text-primary-900 leading-loose mb-8"
-              style={{ wordSpacing: '0.2em', lineHeight: '2' }}
-            >
-              حين تصبح القرارات أكثر تعقيداً، تحتاج إلى ركيزة أكثر وضوحاً.
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-charcoal-800 font-plex leading-relaxed mb-12 max-w-3xl"
-            >
-              نرفض نموذج المستشارين الذين يحطون فجأة وينشرون أخباراً جاهزة ثم يرحلون. بدلاً من ذلك نندمج مع عملائنا ونتعلم سياقهم الخاص.
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-accent-500/30 text-lg">
-                تواصل معنا
-              </Link>
-              <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-50 text-primary-900 border border-primary-900/20 font-bold rounded-lg transition-colors shadow-sm text-lg group">
-                استكشف خدماتنا
-                <ArrowLeft className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" />
-              </Link>
-            </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Right Column: Title Only */}
+            <div className="lg:col-span-7">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold font-plex text-primary-900 leading-tight"
+                style={{ wordSpacing: '0.15em' }}
+              >
+                حين تصبح القرارات أكثر تعقيداً، تحتاج إلى ركيزة أكثر وضوحاً.
+              </motion.h1>
+            </div>
+
+            {/* Left Column: Styled Text Box with Buttons inside */}
+            <div className="lg:col-span-5">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="bg-white/90 dark:bg-charcoal-800/90 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-primary-900/10 dark:border-white/10 shadow-xl shadow-primary-900/5 relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-2 h-full bg-accent-500"></div>
+                <p className="text-xl md:text-2xl text-charcoal-800 dark:text-white font-plex leading-relaxed mb-8">
+                  نرفض نموذج المستشارين الذين يحطون فجأة وينشرون أخباراً جاهزة ثم يرحلون. بدلاً من ذلك نندمج مع عملائنا ونتعلم سياقهم الخاص.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-slate-100 dark:border-white/10">
+                  <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-accent-500/30 text-base">
+                    تواصل معنا
+                  </Link>
+                  <Link href="/services" className="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-slate-50 text-primary-900 border border-primary-900/20 font-bold rounded-xl transition-colors shadow-sm text-base group">
+                    استكشف خدماتنا
+                    <ArrowLeft className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -106,7 +111,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* 1. HVAC GRID (3 Cards Only) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Card 1 */}
             <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
               <div className="h-64 overflow-hidden bg-slate-100">
@@ -149,8 +155,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
-            <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
+            {/* Card 3 (Centered on Row 2 for Desktop) */}
+            <div className="md:col-span-2 md:max-w-2xl md:mx-auto w-full bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
               <div className="h-64 overflow-hidden bg-slate-100">
                 <img src="/vrf_system.jpg" alt="نظام VRF" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -169,21 +175,51 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Card 4 */}
-            <div className="bg-white dark:bg-charcoal-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-100 dark:border-white/5 flex flex-col group">
-              <div className="h-64 overflow-hidden bg-slate-100">
-                <img src="/fire_safety.jpg" alt="Fire &amp; Life Safety" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          {/* 2. DEDICATED STANDALONE FIRE & LIFE SAFETY SECTION */}
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white">خدمات أخرى</h2>
+          </div>
+          <div className="bg-white dark:bg-charcoal-800 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-white/10 p-8 md:p-12 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-5 h-80 lg:h-full min-h-[320px] rounded-2xl overflow-hidden relative shadow-md group">
+                <img src="/fire_safety.jpg" alt="Fire & Life Safety" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 via-transparent to-transparent"></div>
               </div>
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-primary-900 dark:text-white mb-4">Fire &amp; Life Safety</h3>
-                <p className="text-charcoal-800 dark:text-white/80 font-plex mb-6 flex-grow">تلتزم شركة Trane بتوفير بيئات آمنة وصحية داخل المباني تعمل أنظمتها بالتكامل مع أنظمة إنذار الحريق وإدارة المباني، حيث تقوم بإيقاف وحدات التكييف تلقائيا عند حدوث حريق، وإغلاق مخمدات الحريق والدخان وتشغيل أنظمة سحب الدخان وضغط السلالم للمساعدة في حماية الأرواح وتقليل انتشار الدخان.</p>
-                <div className="space-y-3 mt-auto pt-6 border-t border-slate-100 dark:border-white/10 font-plex">
-                  {/* Empty uses/features area */}
+
+              <div className="lg:col-span-7 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-500/10 text-accent-500 font-bold text-sm mb-4 w-fit font-plex">
+                  <span>أنظمة السلامة والحماية</span>
                 </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-6">Fire &amp; Life Safety</h3>
+                <p className="text-lg text-charcoal-800 dark:text-white/90 font-plex font-medium mb-6 leading-relaxed">
+                  نوفر أنظمة متقدمة لحماية الأرواح والمنشآت من مخاطر الحريق، وتشمل:
+                </p>
+                <ul className="space-y-4 text-charcoal-800 dark:text-white/80 font-plex">
+                  <li className="flex items-start gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-accent-500 mt-2 shrink-0"></span>
+                    <span><strong className="text-primary-900 dark:text-white font-bold">نظام الرغوة (Foam):</strong> لتغطية الوقود وعزل الأكسجين (مثالي لمصافي النفط والمصانع الكيميائية).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-accent-500 mt-2 shrink-0"></span>
+                    <span><strong className="text-primary-900 dark:text-white font-bold">نظام الضباب المائي (Water Mist):</strong> رذاذ ناعم موفر للماء، آمن للمعدات الكهربائية والأماكن الأثرية.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-accent-500 mt-2 shrink-0"></span>
+                    <span><strong className="text-primary-900 dark:text-white font-bold">نظام إطفاء المطابخ:</strong> رش كيميائي متخصص لزيوت الطهي مع فصل آلي للغاز والكهرباء.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-accent-500 mt-2 shrink-0"></span>
+                    <span><strong className="text-primary-900 dark:text-white font-bold">نظام الرش بالغمر (Water Deluge):</strong> إطلاق سريع وكثيف للماء لحماية المنشآت عالية الخطورة كالمحولات ومحطات الطاقة.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-accent-500 mt-2 shrink-0"></span>
+                    <span><strong className="text-primary-900 dark:text-white font-bold">نظام منع الانفجارات (Explosion Suppression):</strong> كشف مبكر وإطلاق مواد مثبطة لحماية المصانع وصوامع الحبوب.</span>
+                  </li>
+                </ul>
               </div>
             </div>
-
           </div>
 
           {/* PILLARS / 4 CARDS */}
