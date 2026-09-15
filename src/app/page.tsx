@@ -101,7 +101,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-8 leading-tight">
-              شركة الركيزة الدائمة هي وكيل لشركة Trane المتخصصة في تصنيع أنظمة التدفئة والتهوية وتكييف الهواء
+              تفخر شركة الركيزة الدائمة باستيراد وتوفير أحدث منتجات شركة Trane العالمية، المتخصصة في تصنيع أنظمة التدفئة والتهوية وتكييف الهواء.
             </h2>
             <div className="flex justify-center mb-10">
               <img src="/trane_logo.jpg" alt="Trane Logo" className="h-24 md:h-32 object-contain" />
