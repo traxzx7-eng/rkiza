@@ -92,6 +92,24 @@ export default function Home() {
               من نحن وما نمثله - ليبيون في العمق، عالميون في الكفاءة. تأسست ركيزة بطرابلس، عام 2021، على رسالة واضحة: أن تجلب إلى السوق الليبية جودة الاستشارات الدولية الرائدة ومدعمة على أيدي محترفين يعرفونها حق المعرفة من الداخل. ركيزة — يعبر عن الأساس والركيزة والروابط النقية والصلبة التي تشكل ركائز طموحات الأعمال. منذ تأسيسنا في يونيو 2021، عملنا مع جهات حكومية ومؤسسات خاصة وشركات متعددة الجنسيات ورواد أعمال، عبر أكثر القطاعات حيوية في ليبيا.
             </p>
           </div>
+
+          {/* PILLARS / 4 CARDS */}
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {pillars.map((pillar, index) => (
+              <motion.div 
+                key={pillar.num}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-[#FAFAFA] dark:bg-charcoal-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-white/5 flex flex-col items-center text-center transition-all hover:shadow-md hover:-translate-y-1"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-[#E8D9C0] dark:text-accent-500/50 mb-6 font-plex">{pillar.num}</div>
+                <h3 className="text-xl font-bold text-primary-900 dark:text-white mb-4">{pillar.title}</h3>
+                <p className="text-charcoal-800 dark:text-white/80 leading-relaxed text-sm font-plex">{pillar.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -222,23 +240,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* PILLARS / 4 CARDS */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pillars.map((pillar, index) => (
-              <motion.div 
-                key={pillar.num}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-ivory dark:bg-charcoal-800 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 dark:border-white/5 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all"
-              >
-                <div className="text-4xl font-bold text-accent-500/30 dark:text-accent-500/50 mb-6 font-plex">{pillar.num}</div>
-                <h3 className="text-xl font-bold text-primary-900 dark:text-white mb-4">{pillar.title}</h3>
-                <p className="text-charcoal-800 dark:text-white/80 leading-relaxed text-sm">{pillar.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+
         </div>
       </section>
 
